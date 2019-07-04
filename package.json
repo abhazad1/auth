@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -17,6 +19,8 @@
     "oauth2-server": "^2.3.0",
     "pug": "2.0.0-beta11",
     "request": "^2.83.0",
-    "serve-favicon": "~2.4.5"
-  }
+    "serve-favicon": "~2.4.5",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
